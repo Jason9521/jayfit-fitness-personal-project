@@ -1,0 +1,43 @@
+.bg-primary {
+    background-color: rgb(1, 11, 18);
+}
+
+.color-primary {
+    color: rgb(57, 255, 0);
+}
+
+.bg-secondary {
+    background-color: rgb(57, 255, 0);
+}
+
+.color-secondary {
+    color: rgb(1, 11, 18);
+}
+
+.option-btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.info-layout {
+    height: 25rem;
+    width: 28%;
+    max-width: 320px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+}
+
+
+
