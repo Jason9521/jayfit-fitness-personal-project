@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* Colors */
+
 .bg-primary {
     background-color: rgb(1, 11, 18);
 }
@@ -12,6 +21,52 @@
 
 .color-secondary {
     color: rgb(1, 11, 18);
+}
+
+/* Layout */
+
+.page-title {
+    font-size: 2rem;
+}
+
+.navbar {
+    position: fixed;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: solid 2px rgb(57, 255, 0);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+.navbar > i:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: fixed;
+    top: -80px;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid rgb(57, 255, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.dropdown-toggle {
+    top: 85px;
 }
 
 .option-btn {
