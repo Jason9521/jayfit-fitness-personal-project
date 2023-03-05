@@ -1,5 +1,4 @@
-import './style.css'
-import './utilities.css'
+
 
 import treadmill from "./images/treadmill.jpg"
 
