@@ -23,3 +23,78 @@
     padding: 8rem 0rem;
     text-align: center;
 }
+
+/* Modals */
+
+.personal-modal {
+    height: 35rem;
+    width: 40%;
+    max-width: 415px;
+    margin: 15rem auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-header > h2 {
+    padding-right: 4rem;
+}
+
+.modal-header > i:hover {
+    cursor: pointer;
+}
+
+
+.personal-container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-div > label {
+    padding-bottom: 0.5rem;
+}
+
+.text-div > input {
+    height: 1.5rem;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+}
+
+.weight-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.weight-div > div:first-child {
+    padding-right: 2rem;
+}
+
+.goal-container {
+    display: flex;
+}
+
+.goal-col-one {
+    padding-right: 2rem;
+}
+
+.goal-row-one,
+.goal-row-two {
+    padding-bottom: 0.5rem;
+}
