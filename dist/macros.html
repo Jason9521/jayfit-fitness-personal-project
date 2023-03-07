@@ -29,7 +29,63 @@
 
     <!-- Modals -->
 
-    <dialog id="personalModal" class="personal-modal">
+    <dialog id="personalModal" class="personal-modal bg-secondary">
+
+        <div class="modal-header">
+            <h2>Personal Information</h2>
+            <i class="fa-solid fa-rectangle-xmark fa-xl"></i>
+        </div>
+
+        <div class="personal-container">
+            <div class="text-div">
+                <label for="Name">What is your name?</label>
+                <input id="namePersonal" type="text" name="Name" placeholder="First Name" required>
+            </div>
+            <div class="text-div">
+                <label for="weightCurrent">What is your current weight?</label>
+                <input id="weightCurrent" type="number" name="weightCurrent" placeholder="Current Weight" required>
+            </div>
+            <div class="text-div">
+                <label for="weightTarget">What is your target weight?</label>
+                <input id="weightTarget" type="text" name="weightTarget" placeholder="Target Weight" required>
+            </div>
+            <span>What is your preferred unit of measurement?</span>
+                <div class="weight-div">
+                    <div>
+                        <label for="weightOption">US</label>
+                        <input id="weightUS" type="radio" name="weightOption" required>
+                    </div>
+                    <div>
+                        <label for="weightMetric">Metric</label>
+                        <input id="weightMetric" type="radio" name="weightOption" required>
+                    </div>
+                </div>
+            
+            <span>What is your current goal?</span>
+
+                <div class="goal-container">
+                    <div class="goal-col-one">
+                        <div class="goal-row-one">
+                            <label for="currentGoal">Lose Weight</label>
+                            <input id="weightLoss" type="radio" name="currentGoal" required>
+                        </div>
+                        <div>
+                            <label for="weightGain">Gain Weight</label>
+                            <input id="weightGain" type="radio" name="currentGoal" required>
+                        </div>
+                    </div>
+                    <div class="goal-col-two">
+                        <div class="goal-row-one">
+                            <label for="muscleGain">Build Muscle</label>
+                            <input id="muscleGain" type="radio" name="currentGoal" required>
+                        </div>
+                        <div>
+                            <label for="toneUp">Tone Up</label>
+                            <input id="toneUp" type="radio" name="currentGoal" required>
+                        </div>
+                    </div>
+                </div>
+        </div>
         
     </dialog>
 
