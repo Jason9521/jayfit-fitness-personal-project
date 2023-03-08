@@ -27,23 +27,23 @@
 
     <p class="macro-description color-primary">Here, you will be able to keep track of every macronutrient that you have consumed on each given day. To get started, make sure to enter (or edit) your information here for the best experience.</p>
 
-    <!-- Modals -->
+    <!-- Pesonal Information Modal -->
 
     <dialog id="personalModal" class="personal-modal bg-secondary">
 
         <div class="modal-header">
             <h2>Personal Information</h2>
-            <i class="fa-solid fa-rectangle-xmark fa-xl"></i>
+            <i id="personalClose" class="fa-solid fa-rectangle-xmark fa-xl"></i>
         </div>
 
-        <div class="personal-container">
+        <form class="personal-container">
             <div class="text-div">
                 <label for="Name">What is your name?</label>
                 <input id="namePersonal" type="text" name="Name" placeholder="First Name" required>
             </div>
             <div class="text-div">
                 <label for="weightCurrent">What is your current weight?</label>
-                <input id="weightCurrent" type="number" name="weightCurrent" placeholder="Current Weight" required>
+                <input id="weightCurrent" type="text" name="weightCurrent" placeholder="Current Weight" required>
             </div>
             <div class="text-div">
                 <label for="weightTarget">What is your target weight?</label>
@@ -85,10 +85,34 @@
                         </div>
                     </div>
                 </div>
-        </div>
+                <button class="personal-submit color-primary bg-primary">Submit</button>
+        </form>
         
     </dialog>
 
-    <script src="main.js"></script>
+    <!-- Macro Modal -->
+
+    <dialog id="macroModal" class="macro-modal bg-secondary">
+
+        <div class="modal-header">
+            <h2>Macros</h2>
+            <i id="macroClose" class="fa-solid fa-rectangle-xmark fa-xl"></i>
+        </div>
+
+        <form action="">
+            <!-- Food Item Eaten -->
+            <!-- Calories -->
+            <!-- Fats -->
+            <!-- Protein -->
+            <!-- Carbs -->
+            <!-- Cholesterol -->
+            <!-- Sodium -->
+            <!-- Sugar -->
+            <!-- Fiber -->
+        </form>
+
+    </dialog>
+
+    <script src="../src/macros.js"></script>
 </body>
 </html>
