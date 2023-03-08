@@ -24,23 +24,21 @@
     text-align: center;
 }
 
-/* Modals */
+/* Personal Modal */
 
 .personal-modal {
-    height: 35rem;
+    height: 40rem;
     width: 40%;
     max-width: 415px;
     margin: 15rem auto;
-    display: flex;
-    flex-direction: column;
     border-radius: 10px;
 }
 
 .modal-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem;
 }
 
 .modal-header > h2 {
@@ -50,7 +48,6 @@
 .modal-header > i:hover {
     cursor: pointer;
 }
-
 
 .personal-container {
     height: 80%;
@@ -97,4 +94,27 @@
 .goal-row-one,
 .goal-row-two {
     padding-bottom: 0.5rem;
+}
+
+.personal-submit {
+    width: 30%;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.personal-submit:hover {
+    cursor: pointer;
+}
+
+/* Macro Modal */
+
+.macro-modal {
+    height: 40rem;
+    width: 40%;
+    max-width: 415px;
+    margin: 15rem auto;
+    border-radius: 10px;
 }
