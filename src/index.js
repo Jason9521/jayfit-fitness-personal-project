@@ -1,7 +1,4 @@
 
-import "./macros.js"
-import "./exercises.js"
-import "./workouts.js"
 
 import treadmill from "./images/treadmill.jpg"
 
