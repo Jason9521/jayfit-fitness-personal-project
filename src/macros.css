@@ -29,7 +29,7 @@
 .personal-modal {
     height: 40rem;
     width: 40%;
-    max-width: 415px;
+    max-width: 500px;
     margin: 15rem auto;
     border-radius: 10px;
 }
@@ -100,21 +100,93 @@
     width: 30%;
     margin-top: 1rem;
     padding: 0.3rem;
-    border: none;
+    border: solid rgb(1, 11, 18);
     border-radius: 5px;
     font-weight: 700;
+    transition: 0.3s;
 }
 
 .personal-submit:hover {
     cursor: pointer;
+    background-color: rgb(57, 255, 0);
+    color: rgb(1, 11, 18);
 }
 
 /* Macro Modal */
 
 .macro-modal {
-    height: 40rem;
+    height: 48rem;
     width: 40%;
-    max-width: 415px;
-    margin: 15rem auto;
+    max-width: 500px;
+    margin: 8rem auto;
     border-radius: 10px;
 }
+
+.macro-modal > form {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.macros-required {
+    margin-bottom: 1rem;
+}
+
+.macros-optional > h2 {
+    margin-bottom: 1rem;
+}
+
+.food-item {
+    width: 80%;
+}
+
+.macros-required > div,
+.macros-optional > div {
+    display: flex;
+    align-items: center;
+}
+
+.macros-required > div > label,
+.macros-required > label,
+.macros-optional > label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.macros-required > div > span,
+.macros-optional > div > span {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.macros-required > div > input,
+.macros-optional > div > input {
+    margin: 0.4rem 0 0.7rem 1rem;
+    padding: 0.2rem 0 0.2rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.macros-submit {
+    width: 30%;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: solid rgb(1, 11, 18);
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.macros-submit:hover {
+    cursor: pointer;
+    background-color: rgb(57, 255, 0);
+    color: rgb(1, 11, 18);
+}
+
+/* Calories Burned Modal */
+
+
+
