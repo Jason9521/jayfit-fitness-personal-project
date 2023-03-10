@@ -43,11 +43,11 @@
             </div>
             <div class="text-div">
                 <label for="weightCurrent">What is your current weight?</label>
-                <input id="weightCurrent" type="text" name="weightCurrent" placeholder="Current Weight" required>
+                <input id="weightCurrent" type="number" name="weightCurrent" placeholder="Current Weight" required>
             </div>
             <div class="text-div">
                 <label for="weightTarget">What is your target weight?</label>
-                <input id="weightTarget" type="text" name="weightTarget" placeholder="Target Weight" required>
+                <input id="weightTarget" type="number" name="weightTarget" placeholder="Target Weight" required>
             </div>
             <span>What is your preferred unit of measurement?</span>
                 <div class="weight-div">
@@ -100,16 +100,72 @@
         </div>
 
         <form action="">
-            <!-- Food Item Eaten -->
-            <!-- Calories -->
-            <!-- Fats -->
-            <!-- Protein -->
-            <!-- Carbs -->
-            <!-- Cholesterol -->
-            <!-- Sodium -->
-            <!-- Sugar -->
-            <!-- Fiber -->
+            
+            <div class="macros-required">
+
+                <label for="foodItem">Food Item Consumed</label>
+                <div>
+                    <input class="food-item" type="text" name="foodItem" id="foodItem">
+                </div>
+
+                <label for="calorieCount">Calories</label>
+                <div>
+                    <input type="number" name="calorieCount" id="calorieCount">
+                    <span>calories</span>
+                </div>
+
+                <label for="fatCount">Fats</label>
+                <div>
+                    <input type="number" name="fatCount" id="fatCount">
+                    <span>grams</span>
+                </div>
+                
+                <label for="proteinCount">Protein</label>
+                <div>
+                    <input type="number" name="proteinCount" id="proteinCount">
+                    <span>grams</span>
+                </div>
+
+                <label for="carbCount">Carbs</label>
+                <div>
+                    <input type="number" name="carbCount" id="carbCount">
+                    <span>grams</span>
+                </div>
+            </div>
+
+            <div class="macros-optional">
+                <h2>Optional</h2>
+                <label for="cholesterolCount">Cholesterol</label>
+                <div>
+                    <input type="number" name="cholesterolCount" id="cholesterolCount">
+                    <span>grams</span>
+                </div>
+                <label for="sodiumCount">Sodium</label>
+                <div>
+                    <input type="number" name="sodiumCount" id="sodiumCount">
+                    <span>grams</span>
+                </div>
+                <label for="sugarCount">Sugar</label>
+                <div>
+                    <input type="number" name="sugarCount" id="sugarCount">
+                    <span>grams</span>
+                </div>
+                <label for="fiberCount">Fiber</label>
+                <div>
+                    <input type="number" name="fiberCount" id="fiberCount">
+                    <span>grams</span>
+                </div>
+            </div>
+
+            <button class="macros-submit color-primary bg-primary" type="submit">Submit</button>
+
         </form>
+
+    </dialog>
+
+    <!-- Calories Burned Modal -->
+
+    <dialog id="caloriesModal" class="calories-modal bg-secondary">
 
     </dialog>
 
