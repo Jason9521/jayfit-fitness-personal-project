@@ -15,7 +15,7 @@ personalClose.addEventListener('click', () => {
 })
 
 macroClose.addEventListener('click', () => {
-    macroModal.close
+    macroModal.close()
 })
 
 // personalModal.showModal()
