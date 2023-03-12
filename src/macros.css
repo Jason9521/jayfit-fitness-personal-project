@@ -1,3 +1,6 @@
+body {
+    height: 100rem;
+}
 
 .dropdown {
     position: fixed;
@@ -20,8 +23,41 @@
 }
 
 .macro-title {
-    padding: 8rem 0rem;
+    padding: 12rem 0rem 8rem;
     text-align: center;
+}
+
+/* Page Options */
+
+.macros-page-options {
+    height: 3rem;
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: -50px;
+    transition: 0.5s;  
+}
+
+.macros-options-toggle {
+    top: 100px;
+}
+
+.macros-page-options > button {
+    height: 3rem;
+    width: 30%;
+    max-width: 420px;
+    border: solid;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.open-personal:hover,
+.macro-option-enable {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(57, 255, 0);
 }
 
 /* Personal Modal */
@@ -165,7 +201,7 @@
 .macros-required > div > input,
 .macros-optional > div > input {
     margin: 0.4rem 0 0.7rem 1rem;
-    padding: 0.2rem 0 0.2rem 0.8rem;
+    padding: 0.2rem 0 0.2rem 0.4rem;
     border: none;
     border-radius: 5px;
 }
@@ -188,5 +224,11 @@
 
 /* Calories Burned Modal */
 
-
+.calories-modal {
+    height: 40rem;
+    width: 40%;
+    max-width: 500px;
+    margin: 15rem auto;
+    border-radius: 10px;
+}
 
