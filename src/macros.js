@@ -22,6 +22,18 @@ const caloriesModal = document.getElementById('caloriesModal')
 const caloriesClose = document.getElementById('caloriesClose')
 
 
+let personalStorage = {
+    namePersonal : "",
+    weightCurrent : "",
+    weightTarget : "",
+    weightUS : "",
+    weightMetric : "",
+    weightLoss : "",
+    weightGain : "",
+    muscleGain : "",
+    toneUp : "",
+}
+
 // Event Listeners
 
 openMenu.addEventListener('click', () => {
@@ -57,18 +69,53 @@ caloriesClose.addEventListener('click', () => {
     caloriesModal.close()
 })
 
+// Functions
+
 function storePersonalInfo() {
-    window.localStorage.setItem('namePersonal', namePersonal.value)
-    window.localStorage.setItem('weightCurrent', weightCurrent.value)
-    window.localStorage.setItem('weightTarget', weightTarget.value)
-    window.localStorage.setItem('weightUS', weightUS.value)
-    window.localStorage.setItem('weightMetric', weightMetric.value)
-    window.localStorage.setItem('weightLoss', weightLoss.value)
-    window.localStorage.setItem('weightGain', weightGain.value)
-    window.localStorage.setItem('muscleGain', muscleGain.value)
-    window.localStorage.setItem('toneUp', toneUp.value)
+    personalStorage.namePersonal = namePersonal.value
+    personalStorage.weightCurrent = weightCurrent.value
+    personalStorage.weightTarget = weightTarget.value
+    personalStorage.weightUS = weightUS.checked
+    personalStorage.weightMetric = weightMetric.checked
+    personalStorage.weightLoss = weightLoss.checked
+    personalStorage.weightGain = weightGain.checked
+    personalStorage.muscleGain = muscleGain.checked
+    personalStorage.toneUp = toneUp.checked
+
+    window.localStorage.setItem("personalStorage", JSON.stringify(personalStorage))
 }
-console.log(localStorage)
-// personalModal.showModal()
-// macroModal.showModal()
-// caloriesModal.showModal()
+
+function fetchPersonalInfo() {
+   let getPersonalStorage = window.localStorage.getItem("personalStorage")
+   personalStorage = JSON.parse(getPersonalStorage)
+}
+
+
+// Checks for personalStorage data in localStorage
+function isPersonalStored() {
+    if (localStorage.personalStorage) {
+
+        openMacros.removeAttribute("disabled")
+        openCalories.removeAttribute("disabled")
+        openMacros.classList.remove('macro-option-disable')
+        openCalories.classList.remove('macro-option-disable')
+        openMacros.onmouseover = () => {
+            openMacros.classList.add("macro-option-enable")
+        }
+        openMacros.onmouseleave = () => {
+            openMacros.classList.remove("macro-option-enable")
+        }
+        openCalories.onmouseover = () => {
+            openCalories.classList.add("macro-option-enable")
+        }
+        openCalories.onmouseleave = () => {
+            openCalories.classList.remove("macro-option-enable")
+        }
+    }
+    console.log(localStorage)
+}
+
+
+isPersonalStored()
+
+
