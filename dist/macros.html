@@ -17,6 +17,12 @@
         <i id="openMenu" class="fa-solid fa-bars fa-xl color-primary"></i>
     </header>
 
+    <section id="macrosPageOptions" class="macros-page-options bg-primary">
+        <button class="open-personal bg-primary color-primary" id="openPersonal">Edit Personal Info</button>
+        <button type="button" class="open-macros bg-primary color-primary" id="openMacros" disabled>Enter Macros</button>
+        <button class="open-calories bg-primary color-primary" id="openCalories" disabled>Enter Calories Burned</button>
+    </section>
+
     <nav class="dropdown bg-primary" id="dropDown">
         <a href="./index.html" class="option-btn color-primary">Home</a> 
         <a href="./exercises.html" class="option-btn color-primary">Search Exercises</a>    
@@ -36,7 +42,7 @@
             <i id="personalClose" class="fa-solid fa-rectangle-xmark fa-xl"></i>
         </div>
 
-        <form class="personal-container">
+        <form onsubmit="storePersonalInfo()" class="personal-container">
             <div class="text-div">
                 <label for="Name">What is your name?</label>
                 <input id="namePersonal" type="text" name="Name" placeholder="First Name" required>
@@ -85,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="personal-submit color-primary bg-primary">Submit</button>
+                <button type="submit" id="personalSubmit" class="personal-submit color-primary bg-primary">Submit</button>
         </form>
         
     </dialog>
@@ -166,6 +172,13 @@
     <!-- Calories Burned Modal -->
 
     <dialog id="caloriesModal" class="calories-modal bg-secondary">
+
+        <div class="modal-header">
+            <h2>Calories Burned</h2>
+            <i id="caloriesClose" class="fa-solid fa-rectangle-xmark fa-xl"></i>
+        </div>
+
+
 
     </dialog>
 
