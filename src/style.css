@@ -153,10 +153,11 @@ form > button {
     border: solid rgb(57, 255, 0);
 }
 
-form >button:hover {
+form > button:hover {
     cursor: pointer;
     background-color: rgb(57, 255, 0);
     color: rgb(1, 11, 18);
+    box-shadow: 5px 5px 30px rgb(57, 255, 0);
 }
 
 .contact-container {
