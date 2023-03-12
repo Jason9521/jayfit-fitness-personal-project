@@ -54,6 +54,10 @@ body {
     transition: 0.3s;
 }
 
+.macro-option-disable {
+    color: rgba(163, 163, 163, 0.6) !important;
+}
+
 .open-personal:hover,
 .macro-option-enable {
     cursor: pointer;
@@ -146,6 +150,7 @@ body {
     cursor: pointer;
     background-color: rgb(57, 255, 0);
     color: rgb(1, 11, 18);
+    box-shadow: 5px 5px 15px rgb(1, 11, 18);
 }
 
 /* Macro Modal */
@@ -220,6 +225,7 @@ body {
     cursor: pointer;
     background-color: rgb(57, 255, 0);
     color: rgb(1, 11, 18);
+    box-shadow: 5px 5px 15px rgb(1, 11, 18)
 }
 
 /* Calories Burned Modal */
