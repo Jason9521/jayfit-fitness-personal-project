@@ -23,6 +23,24 @@
         <button class="open-calories bg-primary color-primary macro-option-disable" id="openCalories" disabled>Enter Calories Burned</button>
     </section>
 
+    <section class="goal-banner color-secondary bg-secondary" id="goalBanner">
+
+        <span id="userName">Welcome Back, Jason</span>
+
+        <div class="objectives-container">
+            <div>
+                <span class="obj-top">Current Weight</span>
+                <span class="obj-bottom" id="objOneAnswer"></span>
+            </div>
+
+            <div>
+                <span class="obj-top">Goal</span>
+                <span class="obj-bottom" id="objTwoAnswer"></span>
+            </div>
+        </div>
+
+    </section>
+
     <nav class="dropdown bg-primary" id="dropDown">
         <a href="./index.html" class="option-btn color-primary">Home</a> 
         <a href="./exercises.html" class="option-btn color-primary">Search Exercises</a>    
@@ -51,10 +69,7 @@
                 <label for="weightCurrent">What is your current weight?</label>
                 <input id="weightCurrent" type="number" name="weightCurrent" placeholder="Current Weight" required>
             </div>
-            <div class="text-div">
-                <label for="weightTarget">What is your target weight?</label>
-                <input id="weightTarget" type="number" name="weightTarget" placeholder="Target Weight" required>
-            </div>
+            
             <span>What is your preferred unit of measurement?</span>
                 <div class="weight-div">
                     <div>
