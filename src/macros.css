@@ -32,12 +32,12 @@ body {
 .macros-page-options {
     height: 3rem;
     width: 100%;
-    padding-top: 10rem;
+    padding: 10rem 0 3.5rem;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
     top: -50px;
-    transition: 0.5s;  
+    transition: 0.5s; 
 }
 
 .macros-options-toggle {
@@ -62,6 +62,53 @@ body {
 .macro-option-enable {
     cursor: pointer;
     box-shadow: 5px 5px 10px rgb(57, 255, 0);
+}
+
+/* Goal Banner */
+
+.goal-banner {
+    height: 10rem;
+    width: 85%;
+    position: relative;
+    top: 12rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1px;
+    z-index: -1;
+    box-shadow: 5px 5px 30px rgb(57, 255, 0);
+    /* visibility: hidden; */
+}
+
+.goal-banner > span {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+.objectives-container {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-evenly;
+    font-weight: 700;
+}
+
+.objectives-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obj-top {
+    font-size: 1.2rem;
+    text-decoration: underline 2px;
+    text-underline-offset: 2px;
+}
+
+.obj-bottom {
+    padding-top: 0.5rem;
 }
 
 /* Personal Modal */
