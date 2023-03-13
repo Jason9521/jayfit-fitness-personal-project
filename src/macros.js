@@ -1,10 +1,16 @@
+// ID's
+
 const openMenu = document.getElementById("openMenu");
 const dropDown = document.getElementById("dropDown");
 const macrosPageOptions = document.getElementById('macrosPageOptions')
+
+const userName = document.getElementById('userName')
+const objOneAnswer = document.getElementById('objOneAnswer')
+const objTwoAnswer = document.getElementById('objTwoAnswer')
+
 const openPersonal = document.getElementById('openPersonal')
 const namePersonal = document.getElementById('namePersonal')
 const weightCurrent = document.getElementById('weightCurrent')
-const weightTarget = document.getElementById('weightTarget')
 const weightUS = document.getElementById('weightUS')
 const weightMetric = document.getElementById('weightMetric')
 const weightLoss = document.getElementById('weightLoss')
@@ -12,20 +18,24 @@ const weightGain = document.getElementById('weightGain')
 const muscleGain = document.getElementById('muscleGain')
 const toneUp = document.getElementById('toneUp')
 const personalSubmit = document.getElementById('personalSubmit')
+
 const openMacros = document.getElementById('openMacros')
 const openCalories = document.getElementById('openCalories')
 const personalModal = document.getElementById("personalModal")
 const personalClose = document.getElementById('personalClose')
 const macroModal = document.getElementById('macroModal')
 const macroClose = document.getElementById('macroClose')
+
 const caloriesModal = document.getElementById('caloriesModal')
 const caloriesClose = document.getElementById('caloriesClose')
 
 
+
+// Global Variables
+
 let personalStorage = {
     namePersonal : "",
     weightCurrent : "",
-    weightTarget : "",
     weightUS : "",
     weightMetric : "",
     weightLoss : "",
@@ -74,7 +84,6 @@ caloriesClose.addEventListener('click', () => {
 function storePersonalInfo() {
     personalStorage.namePersonal = namePersonal.value
     personalStorage.weightCurrent = weightCurrent.value
-    personalStorage.weightTarget = weightTarget.value
     personalStorage.weightUS = weightUS.checked
     personalStorage.weightMetric = weightMetric.checked
     personalStorage.weightLoss = weightLoss.checked
@@ -115,7 +124,33 @@ function isPersonalStored() {
     console.log(localStorage)
 }
 
+// Sets text in goal banner based on given user information
+function setGoalBanner() {
+
+    fetchPersonalInfo()
+
+    userName.textContent = "Welcome, " + personalStorage.namePersonal
+    objOneAnswer.textContent = personalStorage.weightCurrent + " lbs"
+    
+    Object.entries(personalStorage).forEach(([key, value]) => {
+        if (value == true) {
+            if (key == "weightGain") {
+                objTwoAnswer.textContent = "To Gain Weight"
+            }
+            else if (key == "weightLoss") {
+                objTwoAnswer.textContent = "To Lose Weight"
+            }
+            else if (key == "muscleGain") {
+                objTwoAnswer.textContent = "To Gain Muscle"
+            }
+            else {
+                objTwoAnswer.textContent = "To Tone Up"
+            }           
+        }
+    })
+}
+
 
 isPersonalStored()
-
+setGoalBanner()
 
